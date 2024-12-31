@@ -7,7 +7,11 @@ const todoList=[{
 }];
 
 renderTodoList();
-
+document.body.addEventListener('keydown',(event)=>{
+    if(event.key=='Enter'){
+        addTodo();
+    }
+})
 function renderTodoList(){
     let todoListHTML='';
     todoList.forEach(function(todoObject, index){
